@@ -30,7 +30,7 @@ const database=require('../database/db2')
        
         const db = await database.main();
         const collection = db.collection('styd');
-        let result = await collection.insertMany(req.body);
+        let result = await collection.insertOne(req.body);
        console.log(result)
         res.send({
             status: 200,
