@@ -6,7 +6,7 @@ const database=require('../database/db2')
  const getapstudent = async (req, res) => {
     try {
         const db = await database.main();
-        const collection = await db.collection('studentlist');
+        const collection = await db.collection('styd');
         const final = await collection.find({}).toArray();
         
         res.send({
