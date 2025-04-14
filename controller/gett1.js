@@ -59,7 +59,7 @@ const database=require('../database/db2')
         }
 
         console.log("Attempting to delete record:", req.query.name);
-        const result = await collection.deleteOne({ name: req.query.name });
+        const result = await collection.deleteOne({ name: req.query.firstname });
 
         if (result.deletedCount > 0) {
             return res.status(200).send({
