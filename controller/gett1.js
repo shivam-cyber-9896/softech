@@ -51,7 +51,7 @@ const database=require('../database/db2')
         const db = await database.main();
         const collection = db.collection('styd'); 
 
-        if (!req.query.name) {
+        if (!req.query.firstname) {
             return res.status(400).send({
                 status: 400,
                 message: "Missing required parameter: name"
