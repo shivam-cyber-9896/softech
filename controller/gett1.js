@@ -87,7 +87,7 @@ const database=require('../database/db2')
         const db=await database.main();
         const collection = db.collection('styd'); 
         var newvalues={ $set:req.body};
-        const result=await collection.updateOne({name: req.query.name},newvalues);
+        const result=await collection.updateOne({firstname: req.query.firstname},newvalues);
         console.log(result);
         if(result.modifiedCount>0){
             res.send({
